@@ -1,0 +1,9 @@
+{
+	"api": {
+		"cut": 5,
+		"epochs": 20
+	},
+	"sumo": {
+		"Behavior": "agressive"
+	}
+}
