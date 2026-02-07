@@ -4,8 +4,8 @@ using System.IO;
 
 public class UploadConfiguration : MonoBehaviour
 {
-    [SerializeField] private GameObject errorGroup;
-    [SerializeField] private GameObject availableGroup;
+    [SerializeField] private ButtonsController buttonsController;
+    
     [System.Serializable]
     private class ApiConfig
     {
@@ -26,6 +26,15 @@ public class UploadConfiguration : MonoBehaviour
         public SumoConfig sumo;
     }
 
+    void Start()
+    {
+        if (buttonsController == null)
+        {
+            Debug.LogError("ButtonsController is not assigned in the inspector.");
+            return;
+        }
+    }
+
     public void OpenFile()
     {
         var paths = StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false);
@@ -43,7 +52,7 @@ public class UploadConfiguration : MonoBehaviour
         if (!File.Exists(filePath))
         {
             Debug.LogError("Arquivo não encontrado: " + filePath);
-            ShowError();
+            buttonsController.SetTextError(true);
             return;
         }
 
@@ -53,44 +62,15 @@ public class UploadConfiguration : MonoBehaviour
         if (config == null || config.api == null || config.sumo == null)
         {
             Debug.LogError("JSON inválido ou incompleto: " + filePath);
-            ShowError();
+            buttonsController.SetTextError(true);
             return;
         }
 
-        HideError();
+        buttonsController.SetBtnStartNotReady(false);
+        buttonsController.SetBtnStart(true);
+
         Debug.Log("Configurações importadas de: " + filePath);
         Debug.Log("API -> cut: " + config.api.cut + ", epochs: " + config.api.epochs);
         Debug.Log("SUMO -> Behavior: " + config.sumo.Behavior);
     }
-
-    private void ShowError()
-    {
-        if (errorGroup != null)
-        {
-            errorGroup.SetActive(true);
-            availableGroup.SetActive(false);
-        }
-    }
-
-    private void HideError()
-    {
-        if (errorGroup != null)
-        {
-            errorGroup.SetActive(false);
-            availableGroup.SetActive(true);
-        }
-    }
-
-    void Start()
-    {
-        if (errorGroup != null)
-        {
-            errorGroup.SetActive(false);
-        }
-        if (availableGroup != null)
-        {
-            availableGroup.SetActive(false);
-        }
-    }
-
 }
