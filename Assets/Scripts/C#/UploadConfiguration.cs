@@ -4,7 +4,7 @@ using System.IO;
 
 public class UploadConfiguration : MonoBehaviour
 {
-    [SerializeField] private ButtonsController buttonsController;
+    [SerializeField] private ObjectsController objectsController;
     
     [System.Serializable]
     private class ApiConfig
@@ -28,7 +28,7 @@ public class UploadConfiguration : MonoBehaviour
 
     void Start()
     {
-        if (buttonsController == null)
+        if (objectsController == null)
         {
             Debug.LogError("ButtonsController is not assigned in the inspector.");
             return;
@@ -37,6 +37,8 @@ public class UploadConfiguration : MonoBehaviour
 
     public void OpenFile()
     {
+        objectsController.SetTextError(false);
+        
         var paths = StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false);
         
         if (paths != null && paths.Length > 0)
@@ -52,22 +54,42 @@ public class UploadConfiguration : MonoBehaviour
         if (!File.Exists(filePath))
         {
             Debug.LogError("Arquivo não encontrado: " + filePath);
-            buttonsController.SetTextError(true);
+            objectsController.SetTextError(true);
             return;
         }
 
         var json = File.ReadAllText(filePath);
-        var config = JsonUtility.FromJson<RootConfig>(json);
+
+        if (string.IsNullOrWhiteSpace(json))
+        {
+            Debug.LogError("JSON vazio: " + filePath);
+            objectsController.SetTextError(true);
+            return;
+        }
+
+        RootConfig config = null;
+        try
+        {
+            config = JsonUtility.FromJson<RootConfig>(json);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Falha ao ler JSON: " + ex.Message);
+            objectsController.SetTextError(true);
+            return;
+        }
+
 
         if (config == null || config.api == null || config.sumo == null)
         {
             Debug.LogError("JSON inválido ou incompleto: " + filePath);
-            buttonsController.SetTextError(true);
+            objectsController.SetTextError(true);
             return;
         }
 
-        buttonsController.SetBtnStartNotReady(false);
-        buttonsController.SetBtnStart(true);
+        objectsController.SetTextAvailable(true);
+        objectsController.SetBtnStartNotReady(false);
+        objectsController.SetBtnStart(true);
 
         Debug.Log("Configurações importadas de: " + filePath);
         Debug.Log("API -> cut: " + config.api.cut + ", epochs: " + config.api.epochs);

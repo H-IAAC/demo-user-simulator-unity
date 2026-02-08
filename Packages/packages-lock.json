@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.annulusgames.ugui-progress-bar": {
+      "version": "https://github.com/AnnulusGames/UnityProgressBar.git?path=Assets/UnityProgressBar",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "3c1940038b542134dd5a873bcaf46a6feeef6d85"
+    },
     "com.simonoliver.unityfigma": {
       "version": "https://github.com/simonoliver/UnityFigmaBridge.git",
       "depth": 0,
