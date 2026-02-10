@@ -51,7 +51,7 @@ Quick steps to run the demo locally:
    - Open Unity Hub, click "Add", select the repository folder and open it.
    - Allow Unity to import assets and resolve packages.
 
-3. Follow the instructions form [UwU repository](https://github.com/mnottale/uwu) to configure Ultralight SDK and Unity bridge.
+3. Follow the instructions from [UwU repository](https://github.com/mnottale/uwu) to configure Ultralight SDK and Unity bridge.
 
 ## Citation
 
