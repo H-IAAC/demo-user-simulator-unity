@@ -33,7 +33,7 @@ Additional notable folders under `Assets/`:
 
 - Unity Editor: Unity 2021.3 LTS or newer.
 
-- [Ultralight SDK 1.2.1](https://docs.ultralig.ht/) or newer. Required for showing HTML pages.
+- [Ultralight SDK 1.2.1](https://docs.ultralig.ht/). Required for showing HTML pages.
 
 - [UwU bridge](https://github.com/mnottale/uwu). Bridge between Unity and Ultralight SDK.
 
