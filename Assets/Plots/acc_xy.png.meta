@@ -1,0 +1,1846 @@
+fileFormatVersion: 2
+guid: fc66615cfae7b61b2bab3dd628402265
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5595976735238684504
+    second: acc_xy_0
+  - first:
+      213: -6678160101114517598
+    second: acc_xy_1
+  - first:
+      213: -3156694046621874208
+    second: acc_xy_2
+  - first:
+      213: -4962639735868449332
+    second: acc_xy_3
+  - first:
+      213: 7873456669095163131
+    second: acc_xy_4
+  - first:
+      213: -9098112139419247968
+    second: acc_xy_5
+  - first:
+      213: 3983206498167136893
+    second: acc_xy_6
+  - first:
+      213: 5030000501999739603
+    second: acc_xy_7
+  - first:
+      213: -1547754928534778407
+    second: acc_xy_8
+  - first:
+      213: -5416374471705070068
+    second: acc_xy_9
+  - first:
+      213: 8834054623800002595
+    second: acc_xy_10
+  - first:
+      213: -4926269607135041242
+    second: acc_xy_11
+  - first:
+      213: -1910157056286288764
+    second: acc_xy_12
+  - first:
+      213: 1015743167354194448
+    second: acc_xy_13
+  - first:
+      213: -3341067945213587115
+    second: acc_xy_14
+  - first:
+      213: 5925552078845668353
+    second: acc_xy_15
+  - first:
+      213: -3080835137175867581
+    second: acc_xy_16
+  - first:
+      213: 6791932408069053600
+    second: acc_xy_17
+  - first:
+      213: 1558521115083231876
+    second: acc_xy_18
+  - first:
+      213: -5709684531986805116
+    second: acc_xy_19
+  - first:
+      213: 4776597650314413916
+    second: acc_xy_20
+  - first:
+      213: 794918853508885221
+    second: acc_xy_21
+  - first:
+      213: 5666822460680605067
+    second: acc_xy_22
+  - first:
+      213: -842181063446377372
+    second: acc_xy_23
+  - first:
+      213: 5229458797955663564
+    second: acc_xy_24
+  - first:
+      213: -80652656703395560
+    second: acc_xy_25
+  - first:
+      213: 3910897243273073643
+    second: acc_xy_26
+  - first:
+      213: -2041780061558758225
+    second: acc_xy_27
+  - first:
+      213: -9214250519587575777
+    second: acc_xy_28
+  - first:
+      213: -4357896955455246355
+    second: acc_xy_29
+  - first:
+      213: 1448195145289720441
+    second: acc_xy_30
+  - first:
+      213: 1440041896214059033
+    second: acc_xy_31
+  - first:
+      213: 2213665076828993312
+    second: acc_xy_32
+  - first:
+      213: -8013782238409930995
+    second: acc_xy_33
+  - first:
+      213: 7597852740457317333
+    second: acc_xy_34
+  - first:
+      213: 7032079908841525995
+    second: acc_xy_35
+  - first:
+      213: -8791430354268297234
+    second: acc_xy_36
+  - first:
+      213: -5927817487124382572
+    second: acc_xy_37
+  - first:
+      213: 3127193100939129487
+    second: acc_xy_38
+  - first:
+      213: 8520194855428973006
+    second: acc_xy_39
+  - first:
+      213: 3173129199286912487
+    second: acc_xy_40
+  - first:
+      213: -6546411617592687351
+    second: acc_xy_41
+  - first:
+      213: -1876252464956290466
+    second: acc_xy_42
+  - first:
+      213: 7771220759753378760
+    second: acc_xy_43
+  - first:
+      213: -1125318208466313432
+    second: acc_xy_44
+  - first:
+      213: 5495856207525250531
+    second: acc_xy_45
+  - first:
+      213: -2325804346412731171
+    second: acc_xy_46
+  - first:
+      213: 6882171830719349912
+    second: acc_xy_47
+  - first:
+      213: 2868369408748282571
+    second: acc_xy_48
+  - first:
+      213: -5172519339975685145
+    second: acc_xy_49
+  - first:
+      213: -5522456809734464110
+    second: acc_xy_50
+  - first:
+      213: -3056453282423293854
+    second: acc_xy_51
+  - first:
+      213: 1718389258404070750
+    second: acc_xy_52
+  - first:
+      213: -3130474843340281273
+    second: acc_xy_53
+  - first:
+      213: -983232007994606844
+    second: acc_xy_54
+  - first:
+      213: 414648031795049290
+    second: acc_xy_55
+  - first:
+      213: 7849124174602807548
+    second: acc_xy_56
+  - first:
+      213: -1709042888358975646
+    second: acc_xy_57
+  - first:
+      213: 2413212795220392692
+    second: acc_xy_58
+  - first:
+      213: 1781327462362967686
+    second: acc_xy_59
+  - first:
+      213: -1598935650435838341
+    second: acc_xy_60
+  - first:
+      213: -3985530219667552003
+    second: acc_xy_61
+  - first:
+      213: 8968363396703187405
+    second: acc_xy_62
+  - first:
+      213: 8232121608306881557
+    second: acc_xy_63
+  - first:
+      213: -6801132724953793461
+    second: acc_xy_64
+  - first:
+      213: 4299206097397741367
+    second: acc_xy_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: acc_xy_0
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 520
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f70432137e8ad40800000000000000
+      internalID: 5595976735238684504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_1
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 520
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7e1eb35c86253a0800000000000000
+      internalID: -6678160101114517598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 520
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7438e4d7b2134d0800000000000000
+      internalID: -3156694046621874208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 551
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd92531479212bb0800000000000000
+      internalID: -4962639735868449332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_4
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 513
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4f8db0023244d60800000000000000
+      internalID: 7873456669095163131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 520
+        width: 77
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa1f3b86330db180800000000000000
+      internalID: -9098112139419247968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_6
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 513
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72a746c431374730800000000000000
+      internalID: 3983206498167136893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 529
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d22bb57ec62ec540800000000000000
+      internalID: 5030000501999739603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_8
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 519
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd0355c715458ae0800000000000000
+      internalID: -1547754928534778407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 519
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06768b7d1c25d4b0800000000000000
+      internalID: -5416374471705070068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_10
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 519
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3280ff120edd89a70800000000000000
+      internalID: 8834054623800002595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_11
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 519
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629a9ee84ef52abb0800000000000000
+      internalID: -4926269607135041242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_12
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 520
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48499da1742cd75e0800000000000000
+      internalID: -1910157056286288764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_13
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 519
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a4d217705a81e00800000000000000
+      internalID: 1015743167354194448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_14
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 520
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5519913d76422a1d0800000000000000
+      internalID: -3341067945213587115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_15
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 519
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c6ca5883acb3250800000000000000
+      internalID: 5925552078845668353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_16
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 520
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f271504ccae35d0800000000000000
+      internalID: -3080835137175867581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 510
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac5b693a8ac14e50800000000000000
+      internalID: 6791932408069053600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 129
+        width: 738
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4825b7f52baf0a510800000000000000
+      internalID: 1558521115083231876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_19
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 467
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e426b5b2023c0b0800000000000000
+      internalID: -5709684531986805116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 485
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57c4f56142e94240800000000000000
+      internalID: 4776597650314413916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 428
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea68a05c7e180b00800000000000000
+      internalID: 794918853508885221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_22
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 438
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d821ef00994ae40800000000000000
+      internalID: 5666822460680605067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_23
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 409
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46cc7bce8c8ff44f0800000000000000
+      internalID: -842181063446377372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 364
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc640b3e115c29840800000000000000
+      internalID: 5229458797955663564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 334
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819a00706d671eef0800000000000000
+      internalID: -80652656703395560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_26
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 313
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3985a625c464630800000000000000
+      internalID: 3910897243273073643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_27
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 322
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4a0511ad32aa3e0800000000000000
+      internalID: -2041780061558758225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_28
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 322
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18268cb8f7602080800000000000000
+      internalID: -9214250519587575777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 299
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def6552eec3a583c0800000000000000
+      internalID: -4357896955455246355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 272
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9726070dfc5091410800000000000000
+      internalID: 1448195145289720441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 253
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918d485997e0cf310800000000000000
+      internalID: 1440041896214059033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 223
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027741ca8a488be10800000000000000
+      internalID: 2213665076828993312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 211
+        width: 35
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07cd34538359c090800000000000000
+      internalID: -8013782238409930995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_34
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 189
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3cfa2ffcef07960800000000000000
+      internalID: 7597852740457317333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 181
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be219a66b67f69160800000000000000
+      internalID: 7032079908841525995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_36
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 197
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7604afba09ef580800000000000000
+      internalID: -8791430354268297234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 156
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c3a9207692cbda0800000000000000
+      internalID: -5927817487124382572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_38
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 98
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8277858e85066b20800000000000000
+      internalID: 3127193100939129487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 132
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec164fe3410dd3670800000000000000
+      internalID: 8520194855428973006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_40
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e58aedd138390c20800000000000000
+      internalID: 3173129199286912487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_41
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 97
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905c5e371597625a0800000000000000
+      internalID: -6546411617592687351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_42
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a445de25636f5e0800000000000000
+      internalID: -1876252464956290466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_43
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbcd387b1ce8db60800000000000000
+      internalID: 7771220759753378760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_44
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f16153d011260f0800000000000000
+      internalID: -1125318208466313432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_45
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e50b2a3a14354c40800000000000000
+      internalID: 5495856207525250531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_46
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd47203054519bfd0800000000000000
+      internalID: -2325804346412731171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_47
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8940a3511d2628f50800000000000000
+      internalID: 6882171830719349912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_48
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 97
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2e90da7ce7ec720800000000000000
+      internalID: 2868369408748282571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_49
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb49e2c0158738b0800000000000000
+      internalID: -5172519339975685145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_50
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d17507aca4c53b0800000000000000
+      internalID: -5522456809734464110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_51
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2683594feeb4595d0800000000000000
+      internalID: -3056453282423293854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_52
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5585051de1f8d710800000000000000
+      internalID: 1718389258404070750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_53
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ae76847b15e84d0800000000000000
+      internalID: -3130474843340281273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_54
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bffa7b2bbda52f0800000000000000
+      internalID: -983232007994606844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_55
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 97
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4375f1203021c500800000000000000
+      internalID: 414648031795049290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_56
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8a121b9d0bdec60800000000000000
+      internalID: 7849124174602807548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_57
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267a4754c824848e0800000000000000
+      internalID: -1709042888358975646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_58
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 48
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faf98260447d7120800000000000000
+      internalID: 2413212795220392692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_59
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 75
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68eeace93eb88b810800000000000000
+      internalID: 1781327462362967686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_60
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 43
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e40195f707fc9e0800000000000000
+      internalID: -1598935650435838341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_61
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 43
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df88127a16d80b8c0800000000000000
+      internalID: -3985530219667552003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_62
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 48
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1fb1d2ef6067c70800000000000000
+      internalID: 8968363396703187405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_63
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 48
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514f2f2bcfe5e3270800000000000000
+      internalID: 8232121608306881557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_64
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 47
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c38d212d58d91a0800000000000000
+      internalID: -6801132724953793461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc_xy_65
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 47
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737f59bda29d9ab30800000000000000
+      internalID: 4299206097397741367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      acc_xy_0: 5595976735238684504
+      acc_xy_1: -6678160101114517598
+      acc_xy_10: 8834054623800002595
+      acc_xy_11: -4926269607135041242
+      acc_xy_12: -1910157056286288764
+      acc_xy_13: 1015743167354194448
+      acc_xy_14: -3341067945213587115
+      acc_xy_15: 5925552078845668353
+      acc_xy_16: -3080835137175867581
+      acc_xy_17: 6791932408069053600
+      acc_xy_18: 1558521115083231876
+      acc_xy_19: -5709684531986805116
+      acc_xy_2: -3156694046621874208
+      acc_xy_20: 4776597650314413916
+      acc_xy_21: 794918853508885221
+      acc_xy_22: 5666822460680605067
+      acc_xy_23: -842181063446377372
+      acc_xy_24: 5229458797955663564
+      acc_xy_25: -80652656703395560
+      acc_xy_26: 3910897243273073643
+      acc_xy_27: -2041780061558758225
+      acc_xy_28: -9214250519587575777
+      acc_xy_29: -4357896955455246355
+      acc_xy_3: -4962639735868449332
+      acc_xy_30: 1448195145289720441
+      acc_xy_31: 1440041896214059033
+      acc_xy_32: 2213665076828993312
+      acc_xy_33: -8013782238409930995
+      acc_xy_34: 7597852740457317333
+      acc_xy_35: 7032079908841525995
+      acc_xy_36: -8791430354268297234
+      acc_xy_37: -5927817487124382572
+      acc_xy_38: 3127193100939129487
+      acc_xy_39: 8520194855428973006
+      acc_xy_4: 7873456669095163131
+      acc_xy_40: 3173129199286912487
+      acc_xy_41: -6546411617592687351
+      acc_xy_42: -1876252464956290466
+      acc_xy_43: 7771220759753378760
+      acc_xy_44: -1125318208466313432
+      acc_xy_45: 5495856207525250531
+      acc_xy_46: -2325804346412731171
+      acc_xy_47: 6882171830719349912
+      acc_xy_48: 2868369408748282571
+      acc_xy_49: -5172519339975685145
+      acc_xy_5: -9098112139419247968
+      acc_xy_50: -5522456809734464110
+      acc_xy_51: -3056453282423293854
+      acc_xy_52: 1718389258404070750
+      acc_xy_53: -3130474843340281273
+      acc_xy_54: -983232007994606844
+      acc_xy_55: 414648031795049290
+      acc_xy_56: 7849124174602807548
+      acc_xy_57: -1709042888358975646
+      acc_xy_58: 2413212795220392692
+      acc_xy_59: 1781327462362967686
+      acc_xy_6: 3983206498167136893
+      acc_xy_60: -1598935650435838341
+      acc_xy_61: -3985530219667552003
+      acc_xy_62: 8968363396703187405
+      acc_xy_63: 8232121608306881557
+      acc_xy_64: -6801132724953793461
+      acc_xy_65: 4299206097397741367
+      acc_xy_7: 5030000501999739603
+      acc_xy_8: -1547754928534778407
+      acc_xy_9: -5416374471705070068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

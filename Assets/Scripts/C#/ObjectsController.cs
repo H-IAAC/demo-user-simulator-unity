@@ -5,19 +5,30 @@ using TMPro;
 public class ObjectsController : MonoBehaviour
 {
 
+    [Header("Textos")]
     [SerializeField] private GameObject textAvailable;
     [SerializeField] private GameObject textError;
     [SerializeField] private GameObject textRunning;
+    [SerializeField] private GameObject textFinish;
+    
 
+    [Header("Botões")]
     [SerializeField] private GameObject btnStart;
     [SerializeField] private GameObject btnStartNotReady;
 
+    [Header("Barra de progresso")]
     [SerializeField] private GameObject progressBar;
     private Slider progressSliderCache;
     [SerializeField] private Image progressFill;
     [SerializeField] private TextMeshProUGUI progressLabel;
 
+    [Header("Mapa")]
     [SerializeField] private GameObject OSMap;
+
+    [Header("Gráficos")]
+    [SerializeField] private GameObject plots;
+    [SerializeField] private GameObject segmentation;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,12 +36,16 @@ public class ObjectsController : MonoBehaviour
         if (textAvailable == null || 
             textError == null ||
             textRunning == null ||
+            textFinish == null ||
             btnStart == null ||
             btnStartNotReady == null ||
             progressBar == null ||
             progressFill == null ||
             progressLabel == null ||
-            OSMap == null)
+            OSMap == null ||
+            plots == null ||
+            segmentation == null
+            )
         {
             Debug.LogError("One or more GameObjects are not assigned in the inspector.");
             return;
@@ -40,10 +55,13 @@ public class ObjectsController : MonoBehaviour
         textAvailable.SetActive(false);
         textError.SetActive(false);
         textRunning.SetActive(false);
+        textFinish.SetActive(false);
         btnStart.SetActive(false);
         progressBar.SetActive(false);
         progressLabel.gameObject.SetActive(false);
         OSMap.SetActive(false);
+        plots.SetActive(false);
+        segmentation.SetActive(false);
     }
 
     public void SetTextAvailable(bool status)
@@ -61,6 +79,10 @@ public class ObjectsController : MonoBehaviour
         textRunning.SetActive(status);
     }
 
+    public void SetTextFinish(bool status)
+    {
+        textFinish.SetActive(status);
+    }
 
     public void SetBtnStart(bool status)
     {
@@ -81,6 +103,16 @@ public class ObjectsController : MonoBehaviour
     public void SetOSMap(bool status)
     {
         OSMap.SetActive(status);
+    }
+
+    public void SetPlots(bool status)
+    {
+        plots.SetActive(status);
+    }
+
+    public void SetSegmented(bool status)
+    {
+        segmentation.SetActive(status);
     }
 
     public void UpdateProgressBar(float percent)

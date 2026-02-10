@@ -3,7 +3,16 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 
+_Recovery/
+inferred_clusters.csv
+
 .vscode/
+.venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 .utmp/
 /[Ll]ibrary/

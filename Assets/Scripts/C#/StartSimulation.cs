@@ -17,16 +17,26 @@ public class StartSimulation : MonoBehaviour
 
     public void StartSim()
     {
+        StartCoroutine(StartSimRoutine());
+    }
+
+    private IEnumerator StartSimRoutine()
+    {
         objectsController.SetBtnStart(false);
         objectsController.SetBtnStartNotReady(true);
         objectsController.SetTextAvailable(false);
         objectsController.SetTextRunning(true);
         objectsController.SetProgressBar(true);
 
-        StartCoroutine(LoadingDummyRoutine());
+        // espera o loading terminar
+        yield return StartCoroutine(LoadingDummyRoutine());
 
         objectsController.SetTextRunning(false);
         objectsController.SetProgressBar(false);
+        objectsController.SetTextFinish(true);
+        objectsController.SetOSMap(true);
+        objectsController.SetPlots(true);
+        objectsController.SetSegmented(true);
     }
 
     private IEnumerator LoadingDummyRoutine()

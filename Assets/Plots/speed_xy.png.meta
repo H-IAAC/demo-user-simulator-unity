@@ -1,0 +1,1456 @@
+fileFormatVersion: 2
+guid: 7903470203ca00ac8ad92fa30a882bc7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8140893879857486159
+    second: speed_xy_0
+  - first:
+      213: 7210237193478168649
+    second: speed_xy_1
+  - first:
+      213: -6614509943458157918
+    second: speed_xy_2
+  - first:
+      213: 1829889617025826330
+    second: speed_xy_3
+  - first:
+      213: -6351703839674355289
+    second: speed_xy_4
+  - first:
+      213: 2303890414294795585
+    second: speed_xy_5
+  - first:
+      213: 7435549267027987970
+    second: speed_xy_6
+  - first:
+      213: -8407677723599831439
+    second: speed_xy_7
+  - first:
+      213: 3002106991324639719
+    second: speed_xy_8
+  - first:
+      213: 6864531465058434401
+    second: speed_xy_9
+  - first:
+      213: -6971847901357383700
+    second: speed_xy_10
+  - first:
+      213: 8636983169486290545
+    second: speed_xy_11
+  - first:
+      213: -5506291997030344174
+    second: speed_xy_12
+  - first:
+      213: 5412106629158003054
+    second: speed_xy_13
+  - first:
+      213: 6499698463130312224
+    second: speed_xy_14
+  - first:
+      213: 2866184887828843611
+    second: speed_xy_15
+  - first:
+      213: 1336584431053649080
+    second: speed_xy_16
+  - first:
+      213: -6188342678969621723
+    second: speed_xy_17
+  - first:
+      213: 4076352143850318903
+    second: speed_xy_18
+  - first:
+      213: 4399291201500916025
+    second: speed_xy_19
+  - first:
+      213: -8883156888027973440
+    second: speed_xy_20
+  - first:
+      213: -2951256433979950394
+    second: speed_xy_21
+  - first:
+      213: 5526598514298617695
+    second: speed_xy_22
+  - first:
+      213: 458108121842171858
+    second: speed_xy_23
+  - first:
+      213: -5979756439547707272
+    second: speed_xy_24
+  - first:
+      213: 5755264058450421912
+    second: speed_xy_25
+  - first:
+      213: -3428868802571221516
+    second: speed_xy_26
+  - first:
+      213: 6056358749185156320
+    second: speed_xy_27
+  - first:
+      213: -3129696037208761794
+    second: speed_xy_28
+  - first:
+      213: -6689245721314534612
+    second: speed_xy_29
+  - first:
+      213: -6036223621080868947
+    second: speed_xy_30
+  - first:
+      213: 622815677143464464
+    second: speed_xy_31
+  - first:
+      213: -7498749747293063971
+    second: speed_xy_32
+  - first:
+      213: 8671356274347938660
+    second: speed_xy_33
+  - first:
+      213: -3538200578015980621
+    second: speed_xy_34
+  - first:
+      213: -1064712648360335009
+    second: speed_xy_35
+  - first:
+      213: -8959010539836925452
+    second: speed_xy_36
+  - first:
+      213: -6783089002432384479
+    second: speed_xy_37
+  - first:
+      213: 5460380169445466753
+    second: speed_xy_38
+  - first:
+      213: 49740932964521818
+    second: speed_xy_39
+  - first:
+      213: -1959270774261545980
+    second: speed_xy_40
+  - first:
+      213: 8629871944422673234
+    second: speed_xy_41
+  - first:
+      213: -4041640324075266628
+    second: speed_xy_42
+  - first:
+      213: 5610933050705260723
+    second: speed_xy_43
+  - first:
+      213: 8169760737722390015
+    second: speed_xy_44
+  - first:
+      213: 7839688774127355126
+    second: speed_xy_45
+  - first:
+      213: 7374841786459263146
+    second: speed_xy_46
+  - first:
+      213: 8016217694096778080
+    second: speed_xy_47
+  - first:
+      213: -6484804328404368065
+    second: speed_xy_48
+  - first:
+      213: -8776792263921182630
+    second: speed_xy_49
+  - first:
+      213: -4917553501292140432
+    second: speed_xy_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: speed_xy_0
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 519
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f499e07f9d34af070800000000000000
+      internalID: 8140893879857486159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_1
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 510
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9406397a688ef0460800000000000000
+      internalID: 7210237193478168649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 519
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa23e8604a8434a0800000000000000
+      internalID: -6614509943458157918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_3
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 519
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1efff859e2156910800000000000000
+      internalID: 1829889617025826330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_4
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 519
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1b9b5b2073ad7a0800000000000000
+      internalID: -6351703839674355289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_5
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 513
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1450871102019ff10800000000000000
+      internalID: 2303890414294795585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_6
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 520
+        width: 77
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e8e13c9a0603760800000000000000
+      internalID: 7435549267027987970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_7
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 513
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17efddaf7ade15b80800000000000000
+      internalID: -8407677723599831439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_8
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 447
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e13f9b1760a9a920800000000000000
+      internalID: 3002106991324639719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 426
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16dbc446ff6b34f50800000000000000
+      internalID: 6864531465058434401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_10
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 426
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef5a8ba5450f3f90800000000000000
+      internalID: -6971847901357383700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_11
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 129
+        width: 715
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ef1449e6abcd770800000000000000
+      internalID: 8636983169486290545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 404
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a1e6f2a98b593b0800000000000000
+      internalID: -5506291997030344174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_13
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 421
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61ef7dfd4aab1b40800000000000000
+      internalID: 5412106629158003054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_14
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 364
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ed80ab051933a50800000000000000
+      internalID: 6499698463130312224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 345
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c81a348fbb6c720800000000000000
+      internalID: 2866184887828843611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 299
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4354165708c8210800000000000000
+      internalID: 1336584431053649080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_17
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 310
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52360a7ee179e1aa0800000000000000
+      internalID: -6188342678969621723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_18
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 270
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ca9996dac129830800000000000000
+      internalID: 4076352143850318903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 242
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939a6f01a0c6d0d30800000000000000
+      internalID: 4399291201500916025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_20
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 214
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8370510efa8b480800000000000000
+      internalID: -8883156888027973440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 194
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6caf983e8e70b07d0800000000000000
+      internalID: -2951256433979950394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 194
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f78fc411c62bc40800000000000000
+      internalID: 5526598514298617695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_23
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 184
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfbf1fd8e68b5600800000000000000
+      internalID: 458108121842171858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_24
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 202
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87087694333a30da0800000000000000
+      internalID: -5979756439547707272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898a2802b2ecedf40800000000000000
+      internalID: 5755264058450421912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_26
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 97
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5c251bdf53a60d0800000000000000
+      internalID: -3428868802571221516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_27
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4a285c1328c0450800000000000000
+      internalID: 6056358749185156320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 97
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a593739061194d0800000000000000
+      internalID: -3129696037208761794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_29
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bdeb525760b23a0800000000000000
+      internalID: -6689245721314534612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_30
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da717a019960b3ca0800000000000000
+      internalID: -6036223621080868947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_31
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a3eacfe8fa4a800800000000000000
+      internalID: 622815677143464464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_32
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4fb0db5d61fe790800000000000000
+      internalID: -7498749747293063971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_33
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 97
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4631d55b698d65870800000000000000
+      internalID: 8671356274347938660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_34
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3964b0259c5eec0800000000000000
+      internalID: -3538200578015980621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_35
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59ed96cc716931f0800000000000000
+      internalID: -1064712648360335009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_36
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f91a0281633ba380800000000000000
+      internalID: -8959010539836925452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_37
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 97
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122b82a9d70add1a0800000000000000
+      internalID: -6783089002432384479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_38
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182626275da27cb40800000000000000
+      internalID: 5460380169445466753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_39
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5795207d17b0b000800000000000000
+      internalID: 49740932964521818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_40
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 97
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40406598c954fc4e0800000000000000
+      internalID: -1959270774261545980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_41
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 97
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b4c687fc673c770800000000000000
+      internalID: 8629871944422673234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_42
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 97
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd599de98539e7c0800000000000000
+      internalID: -4041640324075266628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_43
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 48
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b039c1b1e90edd40800000000000000
+      internalID: 5610933050705260723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_44
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 75
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff550ef0b12d06170800000000000000
+      internalID: 8169760737722390015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_45
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 43
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f48a73576b2ccc60800000000000000
+      internalID: 7839688774127355126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_46
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 43
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa09c9cf783b85660800000000000000
+      internalID: 7374841786459263146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_47
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 48
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063e6d265835f3f60800000000000000
+      internalID: 8016217694096778080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_48
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 48
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35ca8f32d85106a0800000000000000
+      internalID: -6484804328404368065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_49
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 47
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58d499ffe1923680800000000000000
+      internalID: -8776792263921182630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_xy_50
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 47
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078e087152751cbb0800000000000000
+      internalID: -4917553501292140432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      speed_xy_0: 8140893879857486159
+      speed_xy_1: 7210237193478168649
+      speed_xy_10: -6971847901357383700
+      speed_xy_11: 8636983169486290545
+      speed_xy_12: -5506291997030344174
+      speed_xy_13: 5412106629158003054
+      speed_xy_14: 6499698463130312224
+      speed_xy_15: 2866184887828843611
+      speed_xy_16: 1336584431053649080
+      speed_xy_17: -6188342678969621723
+      speed_xy_18: 4076352143850318903
+      speed_xy_19: 4399291201500916025
+      speed_xy_2: -6614509943458157918
+      speed_xy_20: -8883156888027973440
+      speed_xy_21: -2951256433979950394
+      speed_xy_22: 5526598514298617695
+      speed_xy_23: 458108121842171858
+      speed_xy_24: -5979756439547707272
+      speed_xy_25: 5755264058450421912
+      speed_xy_26: -3428868802571221516
+      speed_xy_27: 6056358749185156320
+      speed_xy_28: -3129696037208761794
+      speed_xy_29: -6689245721314534612
+      speed_xy_3: 1829889617025826330
+      speed_xy_30: -6036223621080868947
+      speed_xy_31: 622815677143464464
+      speed_xy_32: -7498749747293063971
+      speed_xy_33: 8671356274347938660
+      speed_xy_34: -3538200578015980621
+      speed_xy_35: -1064712648360335009
+      speed_xy_36: -8959010539836925452
+      speed_xy_37: -6783089002432384479
+      speed_xy_38: 5460380169445466753
+      speed_xy_39: 49740932964521818
+      speed_xy_4: -6351703839674355289
+      speed_xy_40: -1959270774261545980
+      speed_xy_41: 8629871944422673234
+      speed_xy_42: -4041640324075266628
+      speed_xy_43: 5610933050705260723
+      speed_xy_44: 8169760737722390015
+      speed_xy_45: 7839688774127355126
+      speed_xy_46: 7374841786459263146
+      speed_xy_47: 8016217694096778080
+      speed_xy_48: -6484804328404368065
+      speed_xy_49: -8776792263921182630
+      speed_xy_5: 2303890414294795585
+      speed_xy_50: -4917553501292140432
+      speed_xy_6: 7435549267027987970
+      speed_xy_7: -8407677723599831439
+      speed_xy_8: 3002106991324639719
+      speed_xy_9: 6864531465058434401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
