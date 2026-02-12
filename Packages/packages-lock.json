@@ -9,6 +9,15 @@
       },
       "hash": "3c1940038b542134dd5a873bcaf46a6feeef6d85"
     },
+    "com.hiaac.cst-unity": {
+      "version": "https://github.com/H-IAAC/CST-Unity.git?path=CST-Unity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.2"
+      },
+      "hash": "08fd30b90ff1a2a20302bf09b1302364a79f0017"
+    },
     "com.simonoliver.unityfigma": {
       "version": "https://github.com/simonoliver/UnityFigmaBridge.git",
       "depth": 0,

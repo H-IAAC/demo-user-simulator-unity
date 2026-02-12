@@ -1,25 +1,28 @@
 using UnityEngine;
 using SFB;
 using System.IO;
+using System;
 
 public class UploadConfiguration : MonoBehaviour
 {
     [SerializeField] private ObjectsController objectsController;
+    public event Action<string> ConfigurationLoaded;
+    public string LatestConfigurationJson { get; private set; }
     
-    [System.Serializable]
+    [Serializable]
     private class ApiConfig
     {
         public int cut;
         public int epochs;
     }
 
-    [System.Serializable]
+    [Serializable]
     private class SumoConfig
     {
         public string Behavior;
     }
 
-    [System.Serializable]
+    [Serializable]
     private class RootConfig
     {
         public ApiConfig api;
@@ -44,7 +47,6 @@ public class UploadConfiguration : MonoBehaviour
         if (paths != null && paths.Length > 0)
         {
             string filePath = paths[0];
-            Debug.Log("Arquivo selecionado: " + filePath);
             ProcessFile(filePath);
         }
     }
@@ -72,7 +74,7 @@ public class UploadConfiguration : MonoBehaviour
         {
             config = JsonUtility.FromJson<RootConfig>(json);
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
             Debug.LogError("Falha ao ler JSON: " + ex.Message);
             objectsController.SetTextError(true);
@@ -91,8 +93,9 @@ public class UploadConfiguration : MonoBehaviour
         objectsController.SetBtnStartNotReady(false);
         objectsController.SetBtnStart(true);
 
-        Debug.Log("Configurações importadas de: " + filePath);
-        Debug.Log("API -> cut: " + config.api.cut + ", epochs: " + config.api.epochs);
-        Debug.Log("SUMO -> Behavior: " + config.sumo.Behavior);
+        LatestConfigurationJson = json;
+        ConfigurationLoaded?.Invoke(json);
+
+        Debug.Log("UploadConfigurator: Configurações importadas de " + filePath);
     }
 }

@@ -1076,7 +1076,7 @@ Transform:
   - {fileID: 1201367681}
   - {fileID: 285616024}
   - {fileID: 1815973261}
-  - {fileID: 1749302520}
+  - {fileID: 1535295115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034066397
@@ -1357,6 +1357,55 @@ RectTransform:
   m_AnchoredPosition: {x: 15.2, y: -6.7}
   m_SizeDelta: {x: 639.7789, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1371703947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371703948}
+  - component: {fileID: 1371703949}
+  m_Layer: 0
+  m_Name: MemoryPresenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371703948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371703947}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1535295115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371703949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371703947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebe8a4c05cd41e26b8e9d5eee5fcee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HIAAC.CstUnity.Demo.MemoryPresenter
+  redisConnectionString: localhost
+  nodeName: memory_presenter
+  mindName: default_mind
+  timeStepMs: 100
+  logOnChange: 1
 --- !u!1 &1484351421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1513,40 @@ Transform:
   - {fileID: 6222170577386136746}
   - {fileID: 199847108}
   m_Father: {fileID: 1935344655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1535295114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535295115}
+  m_Layer: 0
+  m_Name: CSTUnityScripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535295115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535295114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1371703948}
+  - {fileID: 2071635227}
+  - {fileID: 1770902172}
+  m_Father: {fileID: 1030507531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730323164
 GameObject:
@@ -1746,7 +1829,7 @@ RectTransform:
   m_AnchoredPosition: {x: 97.1, y: -19.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1749302519
+--- !u!1 &1770902171
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1754,42 +1837,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1749302520}
-  - component: {fileID: 1749302521}
+  - component: {fileID: 1770902172}
+  - component: {fileID: 1770902173}
   m_Layer: 0
-  m_Name: GraphHandler
+  m_Name: SumoConfigurator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1749302520
+--- !u!4 &1770902172
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749302519}
+  m_GameObject: {fileID: 1770902171}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.080444, y: -89.8367, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030507531}
+  m_Father: {fileID: 1535295115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1749302521
+--- !u!114 &1770902173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749302519}
+  m_GameObject: {fileID: 1770902171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb8d291bffde2ff0b0ee6541ecf908e, type: 3}
+  m_Script: {fileID: 11500000, guid: f0bdbece414d32a0e80933384b73687b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TelemetryPlotsXCharts_Downsample
+  m_EditorClassIdentifier: Assembly-CSharp::HIAAC.CstUnity.Demo.SumoConfigurator
+  uploadConfiguration: {fileID: 1201367682}
+  redisConnectionString: localhost
+  nodeName: sumo_configurator
+  mindName: default_mind
+  timeStepMs: 100
 --- !u!1 &1815973260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2247,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059040206}
   m_CullTransparentMesh: 1
+--- !u!1 &2071635226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071635227}
+  - component: {fileID: 2071635228}
+  m_Layer: 0
+  m_Name: MemoryStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2071635227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071635226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1535295115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071635228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071635226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bdaed3abceb49b28ccdf76ae666b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HIAAC.CstUnity.Demo.MemoryStorage
+  redisHost: localhost
+  redisPort: 6379
+  flushOnStart: 1
+  abortOnConnectFail: 1
+  memoryStorageTimeStepMs: 50
 --- !u!224 &17840954924074887
 RectTransform:
   m_ObjectHideFlags: 0

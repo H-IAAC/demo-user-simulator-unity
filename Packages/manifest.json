@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.annulusgames.ugui-progress-bar": "https://github.com/AnnulusGames/UnityProgressBar.git?path=Assets/UnityProgressBar",
+    "com.hiaac.cst-unity": "https://github.com/H-IAAC/CST-Unity.git?path=CST-Unity",
     "com.simonoliver.unityfigma": "https://github.com/simonoliver/UnityFigmaBridge.git",
     "com.unity.2d.animation": "13.0.2",
     "com.unity.2d.aseprite": "3.0.1",
