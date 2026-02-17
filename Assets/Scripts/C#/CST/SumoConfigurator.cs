@@ -21,7 +21,7 @@ namespace HIAAC.CstUnity.Demo
         private int configVersion;
 
         private Mind mind;
-        private Memory sumConfiguration;
+        private Memory sumoConfiguration;
         private MemoryStorageCodelet memoryStorageCodelet;
         private SumoConfiguratorCodelet sumoConfiguratorCodelet;
 
@@ -36,7 +36,7 @@ namespace HIAAC.CstUnity.Demo
             uploadConfiguration.ConfigurationLoaded += OnConfigurationLoaded;
 
             mind = new Mind();
-            sumConfiguration = mind.createMemoryObject("SumConfiguration", "");
+            sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
 
             try
             {
@@ -59,7 +59,7 @@ namespace HIAAC.CstUnity.Demo
 
             sumoConfiguratorCodelet = new SumoConfiguratorCodelet(ReadLatestConfiguration, ReadVersion);
             sumoConfiguratorCodelet.setTimeStep(timeStepMs);
-            sumoConfiguratorCodelet.addOutput(sumConfiguration);
+            sumoConfiguratorCodelet.addOutput(sumoConfiguration);
             mind.insertCodelet(sumoConfiguratorCodelet);
 
             mind.start();
@@ -110,7 +110,7 @@ namespace HIAAC.CstUnity.Demo
             private readonly System.Func<string> getConfig;
             private readonly System.Func<int> getVersion;
 
-            private Memory outputSumConfiguration;
+            private Memory outputSumoConfiguration;
             private int lastPublishedVersion = -1;
 
             public SumoConfiguratorCodelet(System.Func<string> getConfig, System.Func<int> getVersion)
@@ -121,7 +121,7 @@ namespace HIAAC.CstUnity.Demo
 
             public override void accessMemoryObjects()
             {
-                outputSumConfiguration = getOutput("SumConfiguration", 0);
+                outputSumoConfiguration = getOutput("SumoConfiguration", 0);
             }
 
             public override void calculateActivation()
@@ -131,7 +131,7 @@ namespace HIAAC.CstUnity.Demo
 
             public override void proc()
             {
-                if (outputSumConfiguration == null)
+                if (outputSumoConfiguration == null)
                     return;
 
                 int version = getVersion();
@@ -142,10 +142,10 @@ namespace HIAAC.CstUnity.Demo
                 if (string.IsNullOrWhiteSpace(json))
                     return;
 
-                outputSumConfiguration.setI(json);
+                outputSumoConfiguration.setI(json);
                 lastPublishedVersion = version;
 
-                Debug.Log("[SumoConfigurator] SumConfiguration updated from uploaded config.");
+                Debug.Log("[SumoConfigurator] SumoConfiguration updated from uploaded config.");
             }
         }
     }

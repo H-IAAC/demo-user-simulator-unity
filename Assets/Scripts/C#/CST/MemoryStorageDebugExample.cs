@@ -39,13 +39,13 @@ namespace HIAAC.CstUnity.Demo
 
         private void LogMemoryValues()
         {
-            var sumConfiguration = memoryStorage.GetSumConfiguration();
+            var sumoConfiguration = memoryStorage.GetSumoConfiguration();
             var gpsBuffer = memoryStorage.GetGPSBuffer();
             var episodes = memoryStorage.GetEpisodes();
 
             Debug.Log(
                 "[MemoryStorageDebugExample] " +
-                $"SumConfiguration={FormatValue(sumConfiguration)} | " +
+                $"SumoConfiguration={FormatValue(sumoConfiguration)} | " +
                 $"GPSBuffer={FormatValue(gpsBuffer)} | " +
                 $"Episodes={FormatValue(episodes)}"
             );

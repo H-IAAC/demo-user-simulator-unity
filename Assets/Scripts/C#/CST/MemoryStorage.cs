@@ -6,7 +6,7 @@ using HIAAC.CstUnity.MemoryStorage;
 namespace HIAAC.CstUnity.Demo
 {
     // MemoryStorage with 3 main memories:
-    // - SumConfiguration
+    // - SumoConfiguration
     // - GPSBuffer
     // - Episodes
     public class MemoryStorage : MonoBehaviour
@@ -23,11 +23,11 @@ namespace HIAAC.CstUnity.Demo
         private Mind mind;
         private MemoryStorageCodelet memoryStorageCodelet;
 
-        private Memory sumConfiguration;
+        private Memory sumoConfiguration;
         private Memory gpsBuffer;
         private Memory episodes;
 
-        public Memory SumConfiguration => sumConfiguration;
+        public Memory SumoConfiguration => sumoConfiguration;
         public Memory GPSBuffer => gpsBuffer;
         public Memory Episodes => episodes;
 
@@ -42,7 +42,7 @@ namespace HIAAC.CstUnity.Demo
 
             mind = new Mind();
 
-            sumConfiguration = mind.createMemoryObject("SumConfiguration", "");
+            sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
             gpsBuffer = mind.createMemoryObject("GPSBuffer", "");
             episodes = mind.createMemoryObject("Episodes", "");
 
@@ -66,12 +66,12 @@ namespace HIAAC.CstUnity.Demo
             }
             mind.start();
 
-            Debug.Log("MemoryStorage inicializado com memórias: SumConfiguration, GPSBuffer e Episodes.");
+            Debug.Log("MemoryStorage inicializado com memórias: SumoConfiguration, GPSBuffer e Episodes.");
         }
 
-        public void SetSumConfiguration(object value)
+        public void SetSumoConfiguration(object value)
         {
-            sumConfiguration.setI(value);
+            sumoConfiguration.setI(value);
         }
 
         public void SetGPSBuffer(object value)
@@ -84,9 +84,9 @@ namespace HIAAC.CstUnity.Demo
             episodes.setI(value);
         }
 
-        public object GetSumConfiguration()
+        public object GetSumoConfiguration()
         {
-            return sumConfiguration.getI();
+            return sumoConfiguration.getI();
         }
 
         public object GetGPSBuffer()
