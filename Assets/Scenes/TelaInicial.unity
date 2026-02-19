@@ -1926,6 +1926,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartSimulation
   objectsController: {fileID: 285616025}
+  targetRoutineTime: 5
+  progressAtTargetTime: 85
+  maxProgressBeforeFinish: 99
+  overtimeSlowdown: 0.35
+  slowdownTransitionWindow: 1.5
+  initialLogStrength: 6
+  overtimeLogStrength: 2.5
+  progressSmoothingTime: 0.18
+  finalSnapDuration: 0.3
+  simulatedRoutineDuration: 20
 --- !u!1 &1828253679
 GameObject:
   m_ObjectHideFlags: 0
