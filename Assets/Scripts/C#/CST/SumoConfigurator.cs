@@ -17,10 +17,12 @@ namespace HIAAC.CstUnity.Demo
         [SerializeField] private int timeStepMs = 100;
 
         private readonly object configLock = new();
-        private string latestConfigJson;
+        private string latestApiConfigJson;
+        private string latestSumoConfigJson;
         private int configVersion;
 
         private Mind mind;
+        private Memory apiConfiguration;
         private Memory sumoConfiguration;
         private MemoryStorageCodelet memoryStorageCodelet;
         private SumoConfiguratorCodelet sumoConfiguratorCodelet;
@@ -36,6 +38,7 @@ namespace HIAAC.CstUnity.Demo
             uploadConfiguration.ConfigurationLoaded += OnConfigurationLoaded;
 
             mind = new Mind();
+            apiConfiguration = mind.createMemoryObject("ApiConfiguration", "");
             sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
 
             try
@@ -57,8 +60,9 @@ namespace HIAAC.CstUnity.Demo
                 return;
             }
 
-            sumoConfiguratorCodelet = new SumoConfiguratorCodelet(ReadLatestConfiguration, ReadVersion);
+            sumoConfiguratorCodelet = new SumoConfiguratorCodelet(ReadLatestApiConfiguration, ReadLatestSumoConfiguration, ReadVersion);
             sumoConfiguratorCodelet.setTimeStep(timeStepMs);
+            sumoConfiguratorCodelet.addOutput(apiConfiguration);
             sumoConfiguratorCodelet.addOutput(sumoConfiguration);
             mind.insertCodelet(sumoConfiguratorCodelet);
 
@@ -82,18 +86,39 @@ namespace HIAAC.CstUnity.Demo
 
         private void OnConfigurationLoaded(string json)
         {
+            if (!ConfigurationContract.TryParse(json, out ConfigurationContract.RootConfig config, out string parseError))
+            {
+                Debug.LogError($"[SumoConfigurator] {parseError}");
+                return;
+            }
+
+            if (!ConfigurationContract.Validate(config, out string validationError))
+            {
+                Debug.LogError($"[SumoConfigurator] JSON inválido: {validationError}");
+                return;
+            }
+
             lock (configLock)
             {
-                latestConfigJson = json;
+                latestApiConfigJson = JsonUtility.ToJson(config.api);
+                latestSumoConfigJson = JsonUtility.ToJson(config.sumo);
                 configVersion++;
             }
         }
 
-        private string ReadLatestConfiguration()
+        private string ReadLatestApiConfiguration()
         {
             lock (configLock)
             {
-                return latestConfigJson;
+                return latestApiConfigJson;
+            }
+        }
+
+        private string ReadLatestSumoConfiguration()
+        {
+            lock (configLock)
+            {
+                return latestSumoConfigJson;
             }
         }
 
@@ -107,20 +132,24 @@ namespace HIAAC.CstUnity.Demo
 
         private class SumoConfiguratorCodelet : Codelet
         {
-            private readonly System.Func<string> getConfig;
+            private readonly System.Func<string> getApiConfig;
+            private readonly System.Func<string> getSumoConfig;
             private readonly System.Func<int> getVersion;
 
+            private Memory outputApiConfiguration;
             private Memory outputSumoConfiguration;
             private int lastPublishedVersion = -1;
 
-            public SumoConfiguratorCodelet(System.Func<string> getConfig, System.Func<int> getVersion)
+            public SumoConfiguratorCodelet(System.Func<string> getApiConfig, System.Func<string> getSumoConfig, System.Func<int> getVersion)
             {
-                this.getConfig = getConfig;
+                this.getApiConfig = getApiConfig;
+                this.getSumoConfig = getSumoConfig;
                 this.getVersion = getVersion;
             }
 
             public override void accessMemoryObjects()
             {
+                outputApiConfiguration = getOutput("ApiConfiguration", 0);
                 outputSumoConfiguration = getOutput("SumoConfiguration", 0);
             }
 
@@ -131,21 +160,23 @@ namespace HIAAC.CstUnity.Demo
 
             public override void proc()
             {
-                if (outputSumoConfiguration == null)
+                if (outputApiConfiguration == null || outputSumoConfiguration == null)
                     return;
 
                 int version = getVersion();
                 if (version == lastPublishedVersion)
                     return;
 
-                string json = getConfig();
-                if (string.IsNullOrWhiteSpace(json))
+                string apiJson = getApiConfig();
+                string sumoJson = getSumoConfig();
+                if (string.IsNullOrWhiteSpace(apiJson) || string.IsNullOrWhiteSpace(sumoJson))
                     return;
 
-                outputSumoConfiguration.setI(json);
+                outputApiConfiguration.setI(apiJson);
+                outputSumoConfiguration.setI(sumoJson);
                 lastPublishedVersion = version;
 
-                Debug.Log("[SumoConfigurator] SumoConfiguration updated from uploaded config.");
+                Debug.Log("[SumoConfigurator] ApiConfiguration and SumoConfiguration updated from uploaded config.");
             }
         }
     }

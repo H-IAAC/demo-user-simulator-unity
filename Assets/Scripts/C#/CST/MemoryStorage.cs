@@ -5,7 +5,8 @@ using HIAAC.CstUnity.MemoryStorage;
 
 namespace HIAAC.CstUnity.Demo
 {
-    // MemoryStorage with 3 main memories:
+    // MemoryStorage with 4 main memories:
+    // - ApiConfiguration
     // - SumoConfiguration
     // - GPSBuffer
     // - Episodes
@@ -23,10 +24,12 @@ namespace HIAAC.CstUnity.Demo
         private Mind mind;
         private MemoryStorageCodelet memoryStorageCodelet;
 
+        private Memory apiConfiguration;
         private Memory sumoConfiguration;
         private Memory gpsBuffer;
         private Memory episodes;
 
+        public Memory ApiConfiguration => apiConfiguration;
         public Memory SumoConfiguration => sumoConfiguration;
         public Memory GPSBuffer => gpsBuffer;
         public Memory Episodes => episodes;
@@ -42,6 +45,7 @@ namespace HIAAC.CstUnity.Demo
 
             mind = new Mind();
 
+            apiConfiguration = mind.createMemoryObject("ApiConfiguration", "");
             sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
             gpsBuffer = mind.createMemoryObject("GPSBuffer", "");
             episodes = mind.createMemoryObject("Episodes", "");
@@ -66,7 +70,12 @@ namespace HIAAC.CstUnity.Demo
             }
             mind.start();
 
-            Debug.Log("MemoryStorage inicializado com memórias: SumoConfiguration, GPSBuffer e Episodes.");
+            Debug.Log("MemoryStorage inicializado com memórias: ApiConfiguration, SumoConfiguration, GPSBuffer e Episodes.");
+        }
+
+        public void SetApiConfiguration(object value)
+        {
+            apiConfiguration.setI(value);
         }
 
         public void SetSumoConfiguration(object value)
@@ -84,6 +93,11 @@ namespace HIAAC.CstUnity.Demo
             episodes.setI(value);
         }
 
+        public object GetApiConfiguration()
+        {
+            return apiConfiguration.getI();
+        }
+
         public object GetSumoConfiguration()
         {
             return sumoConfiguration.getI();
@@ -97,6 +111,25 @@ namespace HIAAC.CstUnity.Demo
         public object GetEpisodes()
         {
             return episodes.getI();
+        }
+
+        public bool TryGetApiConfiguration(out ConfigurationContract.ApiConfig apiConfig, out string error)
+        {
+            string apiJson = GetApiConfiguration()?.ToString();
+            return ConfigurationContract.TryParseApiConfig(apiJson, out apiConfig, out error);
+        }
+
+        public bool TryGetSumoConfiguration(out ConfigurationContract.SumoConfig sumoConfig, out string error)
+        {
+            string sumoJson = GetSumoConfiguration()?.ToString();
+            return ConfigurationContract.TryParseSumoConfig(sumoJson, out sumoConfig, out error);
+        }
+
+        public bool TryGetConfiguration(out ConfigurationContract.RootConfig config, out string error)
+        {
+            string apiJson = GetApiConfiguration()?.ToString();
+            string sumoJson = GetSumoConfiguration()?.ToString();
+            return ConfigurationContract.TryParseFromRedisPayloads(apiJson, sumoJson, out config, out error);
         }
     }
 }

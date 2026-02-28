@@ -15,6 +15,8 @@ namespace HIAAC.CstUnity.Demo
         [SerializeField] private bool logOnChange = true;
 
         private Mind mind;
+        private Memory apiConfiguration;
+        private Memory sumoConfiguration;
         private Memory gpsBuffer;
         private Memory episodes;
         private MemoryStorageCodelet memoryStorageCodelet;
@@ -23,6 +25,8 @@ namespace HIAAC.CstUnity.Demo
         private void Start()
         {
             mind = new Mind();
+            apiConfiguration = mind.createMemoryObject("ApiConfiguration", "");
+            sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
             gpsBuffer = mind.createMemoryObject("GPSBuffer", "");
             episodes = mind.createMemoryObject("Episodes", "");
 
@@ -47,6 +51,8 @@ namespace HIAAC.CstUnity.Demo
 
             memoryPresenterCodelet = new MemoryPresenterCodelet(logOnChange);
             memoryPresenterCodelet.setTimeStep(timeStepMs);
+            memoryPresenterCodelet.addInput(apiConfiguration);
+            memoryPresenterCodelet.addInput(sumoConfiguration);
             memoryPresenterCodelet.addInput(gpsBuffer);
             memoryPresenterCodelet.addInput(episodes);
             mind.insertCodelet(memoryPresenterCodelet);
@@ -62,10 +68,14 @@ namespace HIAAC.CstUnity.Demo
         private class MemoryPresenterCodelet : Codelet
         {
             private readonly bool logOnChange;
+            private Memory inputApiConfiguration;
+            private Memory inputSumoConfiguration;
             private Memory inputGpsBuffer;
             private Memory inputEpisodes;
+            private string lastConfiguration;
             private string lastGps;
             private string lastEpisodes;
+            private string lastConfigError;
 
             public MemoryPresenterCodelet(bool logOnChange)
             {
@@ -74,6 +84,8 @@ namespace HIAAC.CstUnity.Demo
 
             public override void accessMemoryObjects()
             {
+                inputApiConfiguration = getInput("ApiConfiguration", 0);
+                inputSumoConfiguration = getInput("SumoConfiguration", 0);
                 inputGpsBuffer = getInput("GPSBuffer", 0);
                 inputEpisodes = getInput("Episodes", 0);
             }
@@ -85,21 +97,67 @@ namespace HIAAC.CstUnity.Demo
 
             public override void proc()
             {
-                if (inputGpsBuffer == null || inputEpisodes == null)
+                if (inputApiConfiguration == null || inputSumoConfiguration == null || inputGpsBuffer == null || inputEpisodes == null)
                     return;
 
+                string api = inputApiConfiguration.getI()?.ToString() ?? "";
+                string sumo = inputSumoConfiguration.getI()?.ToString() ?? "";
                 string gps = inputGpsBuffer.getI()?.ToString() ?? "";
                 string eps = inputEpisodes.getI()?.ToString() ?? "";
 
                 if (!logOnChange)
                     return;
 
-                if (gps == lastGps && eps == lastEpisodes)
+                bool apiEmpty = string.IsNullOrWhiteSpace(api);
+                bool sumoEmpty = string.IsNullOrWhiteSpace(sumo);
+
+                if (apiEmpty && sumoEmpty)
+                {
+                    if (lastConfigError == "waiting" && gps == lastGps && eps == lastEpisodes)
+                        return;
+
+                    lastConfigError = "waiting";
+                    lastGps = gps;
+                    lastEpisodes = eps;
+                    Debug.Log($"[MemoryPresenter] Waiting for configuration in Redis | GPSBuffer={gps} | Episodes={eps}");
+                    return;
+                }
+
+                if (apiEmpty || sumoEmpty)
+                {
+                    string partialError = apiEmpty ? "ApiConfiguration vazio" : "SumoConfiguration vazio";
+                    if (lastConfigError == partialError && gps == lastGps && eps == lastEpisodes)
+                        return;
+
+                    lastConfigError = partialError;
+                    lastGps = gps;
+                    lastEpisodes = eps;
+                    Debug.LogWarning($"[MemoryPresenter] Partial configuration from Redis: {partialError} | GPSBuffer={gps} | Episodes={eps}");
+                    return;
+                }
+
+                if (!ConfigurationContract.TryParseFromRedisPayloads(api, sumo, out ConfigurationContract.RootConfig config, out string configError))
+                {
+                    if (configError == lastConfigError && gps == lastGps && eps == lastEpisodes)
+                        return;
+
+                    lastConfigError = configError;
+                    lastGps = gps;
+                    lastEpisodes = eps;
+
+                    Debug.LogWarning($"[MemoryPresenter] Invalid configuration from Redis: {configError} | GPSBuffer={gps} | Episodes={eps}");
+                    return;
+                }
+
+                string fullConfiguration = JsonUtility.ToJson(config);
+                if (fullConfiguration == lastConfiguration && gps == lastGps && eps == lastEpisodes)
                     return;
 
+                lastConfiguration = fullConfiguration;
+                lastConfigError = null;
                 lastGps = gps;
                 lastEpisodes = eps;
-                Debug.Log($"[MemoryPresenter] GPSBuffer={gps} | Episodes={eps}");
+                Debug.Log($"[MemoryPresenter] Configuration={fullConfiguration} | GPSBuffer={gps} | Episodes={eps}");
             }
         }
     }

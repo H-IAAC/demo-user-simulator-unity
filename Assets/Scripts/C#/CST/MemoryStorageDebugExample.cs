@@ -39,13 +39,34 @@ namespace HIAAC.CstUnity.Demo
 
         private void LogMemoryValues()
         {
-            var sumoConfiguration = memoryStorage.GetSumoConfiguration();
+            string rawApi = memoryStorage.GetApiConfiguration()?.ToString();
+            string rawSumo = memoryStorage.GetSumoConfiguration()?.ToString();
             var gpsBuffer = memoryStorage.GetGPSBuffer();
             var episodes = memoryStorage.GetEpisodes();
+            bool apiEmpty = string.IsNullOrWhiteSpace(rawApi);
+            bool sumoEmpty = string.IsNullOrWhiteSpace(rawSumo);
+
+            string configText;
+            if (apiEmpty && sumoEmpty)
+            {
+                configText = "<waiting: ApiConfiguration and SumoConfiguration not published yet>";
+            }
+            else if (apiEmpty || sumoEmpty)
+            {
+                configText = apiEmpty ? "<incomplete: ApiConfiguration vazio>" : "<incomplete: SumoConfiguration vazio>";
+            }
+            else if (memoryStorage.TryGetConfiguration(out ConfigurationContract.RootConfig config, out string configError))
+            {
+                configText = JsonUtility.ToJson(config);
+            }
+            else
+            {
+                configText = $"<invalid: {configError}>";
+            }
 
             Debug.Log(
                 "[MemoryStorageDebugExample] " +
-                $"SumoConfiguration={FormatValue(sumoConfiguration)} | " +
+                $"Configuration={configText} | " +
                 $"GPSBuffer={FormatValue(gpsBuffer)} | " +
                 $"Episodes={FormatValue(episodes)}"
             );

@@ -1,9 +1,39 @@
 {
-	"api": {
-		"cut": 5,
-		"epochs": 20
-	},
-	"sumo": {
-		"Behavior": "agressive"
-	}
+  "api": {
+    "cut": 5,
+    "epochs": 20
+  },
+  "sumo": {
+    "behaviour": "Agressive",
+    "locations": [
+      "home",
+      "Instituto de Computação",
+      "Instituto de Filosofia e Ciências Humanas",
+      "Instituto de Geociências",
+      "Faculdade de Engenharia Agrícola",
+      "Instituto de Artes",
+      "Ginásio Multidisciplinar",
+      "Ciclo Básico II",
+      "Faculdade de Engenharia Elétrica e de Computação",
+      "Instituto de Biologia",
+      "Ginásio Multidisciplinar",
+      "Restaurante Universitário",
+      "Faculdade de Engenharia Civil",
+      "Museu Exploratório de Ciências",
+      "Ciclo Básico I",
+      "Faculdade de Educação",
+      "Instituto de Física Gleb Wataghin",
+      "Instituto de Geociências",
+      "Instituto de Biologia",
+      "Instituto de Estudos da Linguagem",
+      "Instituto de Economia",
+      "Instituto de Artes",
+      "Museu Exploratório de Ciências",
+      "Instituto de Computação",
+      "Instituto de Filosofia e Ciências Humanas",
+      "Instituto de Física Gleb Wataghin",
+      "Restaurante Acadêmico",
+      "home"
+    ]
+  }
 }
