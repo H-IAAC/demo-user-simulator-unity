@@ -2,6 +2,7 @@ using UnityEngine;
 using HIAAC.CstUnity.Core.Entities;
 using StackExchange.Redis;
 using HIAAC.CstUnity.MemoryStorage;
+using System.Collections;
 
 namespace HIAAC.CstUnity.Demo
 {
@@ -20,6 +21,8 @@ namespace HIAAC.CstUnity.Demo
 
         [Header("Codelet")]
         [SerializeField] private int memoryStorageTimeStepMs = 50;
+        [SerializeField] private bool clearPartialConfigurationOnStart = true;
+        [SerializeField, Min(0f)] private float partialConfigurationCheckDelaySeconds = 0.25f;
 
         private Mind mind;
         private MemoryStorageCodelet memoryStorageCodelet;
@@ -69,6 +72,11 @@ namespace HIAAC.CstUnity.Demo
                 return;
             }
             mind.start();
+
+            if (clearPartialConfigurationOnStart)
+            {
+                StartCoroutine(ClearPartialConfigurationIfNeeded());
+            }
 
             Debug.Log("MemoryStorage inicializado com memórias: ApiConfiguration, SumoConfiguration, GPSBuffer e Episodes.");
         }
@@ -130,6 +138,31 @@ namespace HIAAC.CstUnity.Demo
             string apiJson = GetApiConfiguration()?.ToString();
             string sumoJson = GetSumoConfiguration()?.ToString();
             return ConfigurationContract.TryParseFromRedisPayloads(apiJson, sumoJson, out config, out error);
+        }
+
+        private IEnumerator ClearPartialConfigurationIfNeeded()
+        {
+            float delay = Mathf.Max(0f, partialConfigurationCheckDelaySeconds);
+            if (delay > 0f)
+            {
+                yield return new WaitForSeconds(delay);
+            }
+
+            string apiJson = GetApiConfiguration()?.ToString();
+            string sumoJson = GetSumoConfiguration()?.ToString();
+            bool apiEmpty = string.IsNullOrWhiteSpace(apiJson);
+            bool sumoEmpty = string.IsNullOrWhiteSpace(sumoJson);
+
+            if (apiEmpty == sumoEmpty)
+                yield break;
+
+            apiConfiguration.setI("");
+            sumoConfiguration.setI("");
+
+            Debug.LogWarning(
+                "[MemoryStorage] Partial configuration detected on startup. " +
+                "Cleared ApiConfiguration and SumoConfiguration to avoid stale Redis state."
+            );
         }
     }
 }

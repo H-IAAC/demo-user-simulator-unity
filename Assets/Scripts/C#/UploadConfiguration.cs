@@ -103,10 +103,39 @@ public static class ConfigurationContract
     }
 
     [Serializable]
+    public class SumoSimulationConfig
+    {
+        public int time_to_teleport;
+        public float lateral_resolution;
+        public float step_length;
+        public int end_time;
+        public int end_time_random_trips;
+    }
+
+    [Serializable]
+    public class SumoBehaviourConfig
+    {
+        public SumoSimulationConfig simulation;
+        public SumoVehicleConfig vehicle;
+        public string[] locations;
+    }
+
+    [Serializable]
+    public class SumoVehicleConfig
+    {
+        public float maxSpeed;
+        public float accel;
+        public float decel;
+        public float speedFactor;
+        public float minGap;
+        public float emergencyDecel;
+        public string vClass;
+    }
+
+    [Serializable]
     public class SumoConfig
     {
-        public string behaviour;
-        public string[] locations;
+        public SumoBehaviourConfig behaviour;
     }
 
     [Serializable]
@@ -166,34 +195,12 @@ public static class ConfigurationContract
             return false;
         }
 
-        if (config.api.cut <= 0 || config.api.epochs <= 0)
-        {
-            error = "api contém valores inválidos";
+        if (!ValidateApi(config.api, out error))
             return false;
-        }
 
-        if (string.IsNullOrWhiteSpace(config.sumo.behaviour))
-        {
-            error = "sumo.behaviour ausente ou vazio";
+        if (!ValidateSumo(config.sumo, out error))
             return false;
-        }
 
-        if (config.sumo.locations == null || config.sumo.locations.Length == 0)
-        {
-            error = "sumo.locations ausente ou vazio";
-            return false;
-        }
-
-        for (int i = 0; i < config.sumo.locations.Length; i++)
-        {
-            if (string.IsNullOrWhiteSpace(config.sumo.locations[i]))
-            {
-                error = $"sumo.locations[{i}] vazio";
-                return false;
-            }
-        }
-
-        error = null;
         return true;
     }
 
@@ -223,14 +230,7 @@ public static class ConfigurationContract
             return false;
         }
 
-        if (apiConfig.cut <= 0 || apiConfig.epochs <= 0)
-        {
-            error = "api contém valores inválidos";
-            return false;
-        }
-
-        error = null;
-        return true;
+        return ValidateApi(apiConfig, out error);
     }
 
     public static bool TryParseSumoConfig(string json, out SumoConfig sumoConfig, out string error)
@@ -259,29 +259,7 @@ public static class ConfigurationContract
             return false;
         }
 
-        if (string.IsNullOrWhiteSpace(sumoConfig.behaviour))
-        {
-            error = "sumo.behaviour ausente ou vazio";
-            return false;
-        }
-
-        if (sumoConfig.locations == null || sumoConfig.locations.Length == 0)
-        {
-            error = "sumo.locations ausente ou vazio";
-            return false;
-        }
-
-        for (int i = 0; i < sumoConfig.locations.Length; i++)
-        {
-            if (string.IsNullOrWhiteSpace(sumoConfig.locations[i]))
-            {
-                error = $"sumo.locations[{i}] vazio";
-                return false;
-            }
-        }
-
-        error = null;
-        return true;
+        return ValidateSumo(sumoConfig, out error);
     }
 
     public static bool TryParseFromRedisPayloads(string apiJson, string sumoJson, out RootConfig config, out string error)
@@ -309,6 +287,114 @@ public static class ConfigurationContract
         if (!Validate(config, out string validationError))
         {
             error = validationError;
+            return false;
+        }
+
+        error = null;
+        return true;
+    }
+
+    private static bool ValidateApi(ApiConfig api, out string error)
+    {
+        if (api == null)
+        {
+            error = "campo api ausente";
+            return false;
+        }
+
+        if (api.cut <= 0 || api.epochs <= 0)
+        {
+            error = "api contém valores inválidos";
+            return false;
+        }
+
+        error = null;
+        return true;
+    }
+
+    private static bool ValidateSumo(SumoConfig sumo, out string error)
+    {
+        if (sumo == null)
+        {
+            error = "campo sumo ausente";
+            return false;
+        }
+
+        if (sumo.behaviour == null)
+        {
+            error = "sumo.behaviour ausente";
+            return false;
+        }
+
+        if (!ValidateSimulation(sumo.behaviour.simulation, out error))
+            return false;
+
+        if (!ValidateVehicle(sumo.behaviour.vehicle, out error))
+            return false;
+
+        if (sumo.behaviour.locations == null || sumo.behaviour.locations.Length == 0)
+        {
+            error = "sumo.behaviour.locations ausente ou vazio";
+            return false;
+        }
+
+        for (int i = 0; i < sumo.behaviour.locations.Length; i++)
+        {
+            if (string.IsNullOrWhiteSpace(sumo.behaviour.locations[i]))
+            {
+                error = $"sumo.behaviour.locations[{i}] vazio";
+                return false;
+            }
+        }
+
+        error = null;
+        return true;
+    }
+
+    private static bool ValidateSimulation(SumoSimulationConfig simulation, out string error)
+    {
+        if (simulation == null)
+        {
+            error = "sumo.behaviour.simulation ausente";
+            return false;
+        }
+
+        if (simulation.time_to_teleport <= 0 ||
+            simulation.lateral_resolution <= 0f ||
+            simulation.step_length <= 0f ||
+            simulation.end_time <= 0 ||
+            simulation.end_time_random_trips <= 0)
+        {
+            error = "sumo.behaviour.simulation contém valores inválidos";
+            return false;
+        }
+
+        error = null;
+        return true;
+    }
+
+    private static bool ValidateVehicle(SumoVehicleConfig vehicle, out string error)
+    {
+        if (vehicle == null)
+        {
+            error = "sumo.behaviour.vehicle ausente";
+            return false;
+        }
+
+        if (vehicle.maxSpeed <= 0f ||
+            vehicle.accel <= 0f ||
+            vehicle.decel <= 0f ||
+            vehicle.speedFactor <= 0f ||
+            vehicle.minGap < 0f ||
+            vehicle.emergencyDecel <= 0f)
+        {
+            error = "sumo.behaviour.vehicle contém valores inválidos";
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(vehicle.vClass))
+        {
+            error = "sumo.behaviour.vehicle.vClass ausente ou vazio";
             return false;
         }
 
