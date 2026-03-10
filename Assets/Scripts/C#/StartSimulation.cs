@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using HIAAC.CstUnity.Demo;
 
 public class StartSimulation : MonoBehaviour
 {
     [SerializeField] private ObjectsController objectsController;
+    [SerializeField] private MemoryStorage memoryStorage;
 
     [Header("Scheduler da barra")]
     [SerializeField, Min(0.5f)] private float targetRoutineTime = 5f;
@@ -29,12 +31,32 @@ public class StartSimulation : MonoBehaviour
             Debug.LogError("ButtonsController is not assigned in the inspector.");
             return;
         }
+
+        if (memoryStorage == null)
+        {
+            memoryStorage = FindAnyObjectByType<MemoryStorage>();
+        }
     }
 
     public void StartSim()
     {
         if (isRunning)
             return;
+
+        if (memoryStorage == null)
+        {
+            memoryStorage = FindAnyObjectByType<MemoryStorage>();
+        }
+
+        if (memoryStorage != null)
+        {
+            memoryStorage.SetSimulationStarted(true);
+            Debug.Log($"[StartSimulation] SimulationStarted={memoryStorage.GetSimulationStarted()} (after Start click)");
+        }
+        else
+        {
+            Debug.LogWarning("[StartSimulation] MemoryStorage não encontrado. SimulationStarted não foi marcado como true.");
+        }
 
         StartCoroutine(StartSimRoutine());
     }

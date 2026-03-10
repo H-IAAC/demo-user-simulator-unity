@@ -6,13 +6,18 @@ using System.Collections;
 
 namespace HIAAC.CstUnity.Demo
 {
-    // MemoryStorage with 4 main memories:
+    // MemoryStorage with main memories:
     // - ApiConfiguration
     // - SumoConfiguration
     // - GPSBuffer
     // - Episodes
+    // - SimulationStarted
     public class MemoryStorage : MonoBehaviour
     {
+        private const string MindName = "default_mind";
+        private const string NodeName = "memory_storage";
+        private const string SimulationStartedMemoryName = "SimulationStarted";
+
         [Header("Redis")]
         [SerializeField] private string redisHost = "localhost";
         [SerializeField] private int redisPort = 6379;
@@ -31,11 +36,13 @@ namespace HIAAC.CstUnity.Demo
         private Memory sumoConfiguration;
         private Memory gpsBuffer;
         private Memory episodes;
+        private Memory simulationStarted;
 
         public Memory ApiConfiguration => apiConfiguration;
         public Memory SumoConfiguration => sumoConfiguration;
         public Memory GPSBuffer => gpsBuffer;
         public Memory Episodes => episodes;
+        public Memory SimulationStarted => simulationStarted;
 
         private void Start()
         {
@@ -52,13 +59,14 @@ namespace HIAAC.CstUnity.Demo
             sumoConfiguration = mind.createMemoryObject("SumoConfiguration", "");
             gpsBuffer = mind.createMemoryObject("GPSBuffer", "");
             episodes = mind.createMemoryObject("Episodes", "");
+            simulationStarted = mind.createMemoryObject("SimulationStarted", false);
 
             try
             {
                 memoryStorageCodelet = new MemoryStorageCodelet(
                     mind,
-                    "memory_storage",
-                    "default_mind",
+                    NodeName,
+                    MindName,
                     0.5,
                     $"{redisHost}:{redisPort},abortConnect={abortOnConnectFail.ToString().ToLower()}"
                 );
@@ -72,13 +80,16 @@ namespace HIAAC.CstUnity.Demo
                 return;
             }
             mind.start();
+            simulationStarted.setI(false);
+            ForceWriteSimulationStartedToRedis(false, "startup");
+            Debug.Log($"[MemoryStorage] SimulationStarted={simulationStarted.getI()} (startup)");
 
             if (clearPartialConfigurationOnStart)
             {
                 StartCoroutine(ClearPartialConfigurationIfNeeded());
             }
 
-            Debug.Log("MemoryStorage inicializado com memórias: ApiConfiguration, SumoConfiguration, GPSBuffer e Episodes.");
+            Debug.Log("MemoryStorage inicializado com memórias: ApiConfiguration, SumoConfiguration, GPSBuffer, Episodes e SimulationStarted.");
         }
 
         public void SetApiConfiguration(object value)
@@ -101,6 +112,13 @@ namespace HIAAC.CstUnity.Demo
             episodes.setI(value);
         }
 
+        public void SetSimulationStarted(bool value)
+        {
+            simulationStarted.setI(value);
+            ForceWriteSimulationStartedToRedis(value, "SetSimulationStarted");
+            Debug.Log($"[MemoryStorage] SimulationStarted={simulationStarted.getI()}");
+        }
+
         public object GetApiConfiguration()
         {
             return apiConfiguration.getI();
@@ -119,6 +137,11 @@ namespace HIAAC.CstUnity.Demo
         public object GetEpisodes()
         {
             return episodes.getI();
+        }
+
+        public object GetSimulationStarted()
+        {
+            return simulationStarted.getI();
         }
 
         public bool TryGetApiConfiguration(out ConfigurationContract.ApiConfig apiConfig, out string error)
@@ -163,6 +186,40 @@ namespace HIAAC.CstUnity.Demo
                 "[MemoryStorage] Partial configuration detected on startup. " +
                 "Cleared ApiConfiguration and SumoConfiguration to avoid stale Redis state."
             );
+        }
+
+        private void ForceWriteSimulationStartedToRedis(bool value, string origin)
+        {
+            string connectionString = $"{redisHost}:{redisPort},abortConnect={abortOnConnectFail.ToString().ToLower()}";
+            string memoryKey = $"{MindName}:memories:{SimulationStartedMemoryName}";
+            string serializedBoolean = value ? "true" : "false";
+
+            try
+            {
+                using var muxer = ConnectionMultiplexer.Connect(connectionString);
+                IDatabase db = muxer.GetDatabase();
+
+                if (!db.KeyExists(memoryKey))
+                {
+                    db.HashSet(memoryKey, new HashEntry[]
+                    {
+                        new HashEntry("name", SimulationStartedMemoryName),
+                        new HashEntry("evaluation", 0.0),
+                        new HashEntry("id", 0),
+                        new HashEntry("owner", NodeName),
+                        new HashEntry("logical_time", 0)
+                    });
+                }
+
+                db.HashSet(memoryKey, "I", serializedBoolean);
+                db.Publish($"{memoryKey}:update", "");
+
+                Debug.Log($"[MemoryStorage] Redis write {memoryKey}.I={serializedBoolean} ({origin})");
+            }
+            catch (RedisConnectionException ex)
+            {
+                Debug.LogWarning($"[MemoryStorage] Could not force Redis write for SimulationStarted. Details: {ex.Message}");
+            }
         }
     }
 }
