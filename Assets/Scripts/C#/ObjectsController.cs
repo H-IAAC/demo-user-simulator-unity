@@ -62,6 +62,8 @@ public class ObjectsController : MonoBehaviour
         OSMap.SetActive(false);
         plots.SetActive(false);
         segmentation.SetActive(false);
+
+        progressFill.color = new Color32(0xFF, 0x75, 0x1A, 0xFF);
     }
 
     public void SetTextAvailable(bool status)
