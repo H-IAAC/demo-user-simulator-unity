@@ -7,6 +7,7 @@ public class StartSimulation : MonoBehaviour
 {
     [SerializeField] private ObjectsController objectsController;
     [SerializeField] private MemoryStorage memoryStorage;
+    [SerializeField] private UltralightLocalServer ultralightLocalServer;
 
     [Header("Scheduler da barra")]
     [SerializeField, Min(0.5f)] private float targetRoutineTime = 5f;
@@ -35,6 +36,16 @@ public class StartSimulation : MonoBehaviour
         if (memoryStorage == null)
         {
             memoryStorage = FindAnyObjectByType<MemoryStorage>();
+        }
+
+        if (ultralightLocalServer == null)
+        {
+            ultralightLocalServer = FindAnyObjectByType<UltralightLocalServer>();
+        }
+
+        if (ultralightLocalServer != null)
+        {
+            ultralightLocalServer.SetAdditionalViewsVisible(false);
         }
     }
 
@@ -65,6 +76,9 @@ public class StartSimulation : MonoBehaviour
     {
         isRunning = true;
 
+        if (ultralightLocalServer != null)
+            ultralightLocalServer.SetAdditionalViewsVisible(false);
+
         objectsController.SetBtnStart(false);
         objectsController.SetBtnStartNotReady(true);
         objectsController.SetTextAvailable(false);
@@ -80,6 +94,13 @@ public class StartSimulation : MonoBehaviour
         objectsController.SetOSMap(true);
         objectsController.SetPlots(true);
         objectsController.SetSegmented(true);
+        objectsController.SetExtraHtmlElements(true);
+
+        if (ultralightLocalServer != null)
+        {
+            ultralightLocalServer.ReloadConfiguredViews();
+            ultralightLocalServer.SetAdditionalViewsVisible(true);
+        }
 
         isRunning = false;
     }

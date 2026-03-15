@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class ObjectsController : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class ObjectsController : MonoBehaviour
     [Header("Gráficos")]
     [SerializeField] private GameObject plots;
     [SerializeField] private GameObject segmentation;
+
+    [Header("Elementos HTML extras")]
+    [SerializeField] private List<GameObject> extraHtmlElements = new List<GameObject>();
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,6 +66,7 @@ public class ObjectsController : MonoBehaviour
         OSMap.SetActive(false);
         plots.SetActive(false);
         segmentation.SetActive(false);
+        SetExtraHtmlElements(false);
 
         progressFill.color = new Color32(0xFF, 0x75, 0x1A, 0xFF);
     }
@@ -115,6 +120,18 @@ public class ObjectsController : MonoBehaviour
     public void SetSegmented(bool status)
     {
         segmentation.SetActive(status);
+    }
+
+    public void SetExtraHtmlElements(bool status)
+    {
+        if (extraHtmlElements == null)
+            return;
+
+        for (int i = 0; i < extraHtmlElements.Count; i++)
+        {
+            if (extraHtmlElements[i] != null)
+                extraHtmlElements[i].SetActive(status);
+        }
     }
 
     public void UpdateProgressBar(float percent)
