@@ -93,7 +93,6 @@ public class StartSimulation : MonoBehaviour
         objectsController.SetTextFinish(true);
         objectsController.SetOSMap(true);
         objectsController.SetPlots(true);
-        objectsController.SetSegmented(true);
         objectsController.SetExtraHtmlElements(true);
 
         if (ultralightLocalServer != null)

@@ -28,7 +28,7 @@ public class ObjectsController : MonoBehaviour
 
     [Header("Gráficos")]
     [SerializeField] private GameObject plots;
-    [SerializeField] private GameObject segmentation;
+    [SerializeField] private GameObject segmentationLegacy;
 
     [Header("Elementos HTML extras")]
     [SerializeField] private List<GameObject> extraHtmlElements = new List<GameObject>();
@@ -47,8 +47,7 @@ public class ObjectsController : MonoBehaviour
             progressFill == null ||
             progressLabel == null ||
             OSMap == null ||
-            plots == null ||
-            segmentation == null
+            plots == null
             )
         {
             Debug.LogError("One or more GameObjects are not assigned in the inspector.");
@@ -65,7 +64,8 @@ public class ObjectsController : MonoBehaviour
         progressLabel.gameObject.SetActive(false);
         OSMap.SetActive(false);
         plots.SetActive(false);
-        segmentation.SetActive(false);
+        if (segmentationLegacy != null)
+            segmentationLegacy.SetActive(false);
         SetExtraHtmlElements(false);
 
         progressFill.color = new Color32(0xFF, 0x75, 0x1A, 0xFF);
@@ -115,11 +115,15 @@ public class ObjectsController : MonoBehaviour
     public void SetPlots(bool status)
     {
         plots.SetActive(status);
+        // Legacy support: if an old segmentation object still exists in scene, keep it in sync.
+        if (segmentationLegacy != null)
+            segmentationLegacy.SetActive(status);
     }
 
     public void SetSegmented(bool status)
     {
-        segmentation.SetActive(status);
+        // Segmentation is now unified with plots.
+        SetPlots(status);
     }
 
     public void SetExtraHtmlElements(bool status)
