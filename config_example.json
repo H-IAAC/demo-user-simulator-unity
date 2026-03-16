@@ -1,14 +1,14 @@
 {
   "api": {
-    "cut": 5,
-    "epochs": 2
+    "cut": 8,
+    "epochs": 5
   },
   "sumo": {
     "behaviour": {
       "simulation": {
         "time_to_teleport": 200,
         "lateral_resolution": 0.8,
-        "step_length": 0.1,
+        "step_length": 0.01,
         "end_time": 1000,
         "end_time_random_trips": 1000
       },
@@ -25,7 +25,15 @@
 
       "locations": [
         "home",
-        "Instituto de Computação"
+        "Instituto de Computação",
+        "Instituto de Filosofia e Ciências Humanas",
+        "Instituto de Geociências",
+        "Faculdade de Engenharia Agrícola",
+        "Instituto de Artes",
+        "Ginásio Multidisciplinar",
+        "Ciclo Básico II",
+        "Faculdade de Engenharia Elétrica e de Computação",
+        "Instituto de Biologia"
       ]
     }
   }

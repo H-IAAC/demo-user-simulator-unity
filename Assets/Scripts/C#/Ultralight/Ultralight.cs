@@ -113,6 +113,7 @@ public class Ultralight: MonoBehaviour
     public string javascript = "";
     public bool execJavascriptNow = false;
     bool created = false;
+    private int renderRevision = 0;
     int nForce = 0;
     Texture2D tex;
     int x;
@@ -127,6 +128,8 @@ public class Ultralight: MonoBehaviour
     {
         ULBridge.ulbridge_view_load_url(gameObject.name, url);
     }
+
+    public int RenderRevision => renderRevision;
     public void ExecJavascript(string js)
     {
         if (created)
@@ -198,6 +201,7 @@ public class Ultralight: MonoBehaviour
             if (vd != null && vd.data != null && vd.changed)
             {
                 vd.changed = false;
+                renderRevision++;
                 if (tex == null || tex.width != vd.w || tex.height != vd.h)
                     tex = new Texture2D(vd.w, vd.h);
                 tex.SetPixels32(vd.data);
@@ -356,6 +360,7 @@ public class Ultralight: MonoBehaviour
         else
         {
             vd.changed = false;
+            renderRevision++;
             if (tex == null || tex.width != vd.w || tex.height != vd.h)
             {
                 Debug.Log($"Creating texture {vd.w} {vd.h}");

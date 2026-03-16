@@ -208,7 +208,6 @@ public class UltralightLocalServer : MonoBehaviour
         if (visible && (listener == null || !listener.IsListening))
         {
             StartServer();
-            return;
         }
 
         HashSet<Ultralight> seenTargets = new HashSet<Ultralight>();
@@ -235,6 +234,56 @@ public class UltralightLocalServer : MonoBehaviour
             if (visible)
                 TryApplyAutoLoadView(view, i);
         }
+    }
+
+    public List<string> GetConfiguredSourcePagePaths()
+    {
+        EnsureRootPathInitialized();
+
+        List<string> paths = new List<string>();
+        HashSet<string> seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        List<string> pageNames = CollectConfiguredPageNames();
+
+        for (int i = 0; i < pageNames.Count; i++)
+        {
+            string safePage = SanitizeRelativePath(pageNames[i]);
+            if (string.IsNullOrEmpty(safePage))
+                continue;
+
+            string sourcePage = ResolveSourcePageVariant(safePage);
+            string fullPath = TryResolvePagePath(sourcePage);
+            if (string.IsNullOrEmpty(fullPath))
+                continue;
+
+            if (seen.Add(fullPath))
+                paths.Add(fullPath);
+        }
+
+        return paths;
+    }
+
+    public List<Ultralight> GetConfiguredUltralightTargets()
+    {
+        List<Ultralight> targets = new List<Ultralight>();
+        HashSet<Ultralight> seen = new HashSet<Ultralight>();
+
+        if (targetUltralight != null && seen.Add(targetUltralight))
+            targets.Add(targetUltralight);
+
+        if (additionalViews == null)
+            return targets;
+
+        for (int i = 0; i < additionalViews.Count; i++)
+        {
+            AutoLoadView view = additionalViews[i];
+            if (view == null || view.target == null)
+                continue;
+
+            if (seen.Add(view.target))
+                targets.Add(view.target);
+        }
+
+        return targets;
     }
 
     private async Task ListenLoop(CancellationToken token)
@@ -354,6 +403,46 @@ public class UltralightLocalServer : MonoBehaviour
     private string BuildUrl(string safeRelativePath)
     {
         return $"http://127.0.0.1:{port}/{safeRelativePath}";
+    }
+
+    private void EnsureRootPathInitialized()
+    {
+        if (!string.IsNullOrEmpty(rootPath))
+            return;
+
+        rootPath = ResolveRootPath();
+    }
+
+    private List<string> CollectConfiguredPageNames()
+    {
+        List<string> pages = new List<string> { startPage };
+
+        if (additionalViews == null)
+            return pages;
+
+        for (int i = 0; i < additionalViews.Count; i++)
+        {
+            AutoLoadView view = additionalViews[i];
+            if (view == null || string.IsNullOrWhiteSpace(view.page))
+                continue;
+            pages.Add(view.page);
+        }
+
+        return pages;
+    }
+
+    private static string ResolveSourcePageVariant(string safePage)
+    {
+        if (string.IsNullOrEmpty(safePage))
+            return safePage;
+
+        if (safePage.EndsWith(".ultralight.html", StringComparison.OrdinalIgnoreCase))
+            return safePage.Substring(0, safePage.Length - ".ultralight.html".Length) + ".html";
+
+        if (safePage.EndsWith(".ultralight.htm", StringComparison.OrdinalIgnoreCase))
+            return safePage.Substring(0, safePage.Length - ".ultralight.htm".Length) + ".htm";
+
+        return safePage;
     }
 
     private void ApplyAdditionalViewLayout(Ultralight view, int positionIndex)
