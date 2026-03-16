@@ -1,5 +1,5 @@
-run_root=/tmp/tmp2qsyttc0/scratch/run_2026-03-16_12-36-37
-out_csv_path=/tmp/tmp2qsyttc0/scratch/run_2026-03-16_12-36-37/artifacts/inferred_clusters.csv
-report_dir=/tmp/tmp2qsyttc0/scratch/run_2026-03-16_12-36-37/reports/episodes/cut-8
-groups_map_exists=True path=/tmp/tmp2qsyttc0/scratch/run_2026-03-16_12-36-37/reports/episodes/cut-8/groups_map.html
-combined_sensors_exists=True path=/tmp/tmp2qsyttc0/scratch/run_2026-03-16_12-36-37/reports/episodes/cut-8/combined_sensors.html
+run_root=/tmp/tmplpvqdn8y/scratch/run_2026-03-16_13-01-43
+out_csv_path=/tmp/tmplpvqdn8y/scratch/run_2026-03-16_13-01-43/artifacts/inferred_clusters.csv
+report_dir=/tmp/tmplpvqdn8y/scratch/run_2026-03-16_13-01-43/reports/episodes/cut-6
+groups_map_exists=True path=/tmp/tmplpvqdn8y/scratch/run_2026-03-16_13-01-43/reports/episodes/cut-6/groups_map.html
+combined_sensors_exists=True path=/tmp/tmplpvqdn8y/scratch/run_2026-03-16_13-01-43/reports/episodes/cut-6/combined_sensors.html

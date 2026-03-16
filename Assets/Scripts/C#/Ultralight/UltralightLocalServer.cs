@@ -39,6 +39,8 @@ public class UltralightLocalServer : MonoBehaviour
     [Header("HTML Optimization")]
     [SerializeField] private bool optimizeLargeHtmlFiles = true;
     [SerializeField] private int largeHtmlThresholdBytes = 25 * 1024 * 1024;
+    [SerializeField] private bool optimizePlotlyHtmlRegardlessOfSize = true;
+    [SerializeField] private bool allowLargerOptimizedHtmlForCompatibility = true;
     [SerializeField] private bool downsampleTypedArraysForUltralight = true;
     [SerializeField] private int maxTypedArrayPoints = 10000;
     [SerializeField] private bool convertTypedArraysToPlainJson = true;
@@ -582,7 +584,8 @@ public class UltralightLocalServer : MonoBehaviour
             return safePage;
         }
 
-        if (sourceSize < Math.Max(1, largeHtmlThresholdBytes))
+        bool belowThreshold = sourceSize < Math.Max(1, largeHtmlThresholdBytes);
+        if (belowThreshold && !optimizePlotlyHtmlRegardlessOfSize)
             return safePage;
 
         string optimizedPath = Path.Combine(
@@ -599,7 +602,7 @@ public class UltralightLocalServer : MonoBehaviour
 
             if (needsRebuild)
             {
-                bool created = CreateOptimizedHtml(sourcePath, optimizedPath);
+                bool created = CreateOptimizedHtml(sourcePath, optimizedPath, allowLargerOptimizedHtmlForCompatibility);
                 if (!created)
                     return safePage;
             }
@@ -616,7 +619,7 @@ public class UltralightLocalServer : MonoBehaviour
         return relativeOptimized;
     }
 
-    private bool CreateOptimizedHtml(string sourcePath, string destinationPath)
+    private bool CreateOptimizedHtml(string sourcePath, string destinationPath, bool allowLargerOutput)
     {
         string html;
         try
@@ -651,7 +654,7 @@ public class UltralightLocalServer : MonoBehaviour
 
         optimized = BuildOptimizationMarker() + "\n" + prefix + payload;
 
-        if (optimized.Length >= html.Length)
+        if (!allowLargerOutput && optimized.Length >= html.Length)
             return false;
 
         try
@@ -676,7 +679,7 @@ public class UltralightLocalServer : MonoBehaviour
 
     private string BuildOptimizationMarker()
     {
-        return $"{OptimizationMarkerPrefix}|max_points={Math.Max(2, maxTypedArrayPoints)}|typed_arrays={(downsampleTypedArraysForUltralight ? "on" : "off")}|plain_arrays={(convertTypedArraysToPlainJson ? "on" : "off")}|diag={(injectUltralightClientDiagnostics ? "on" : "off")} -->";
+        return $"{OptimizationMarkerPrefix}|max_points={Math.Max(2, maxTypedArrayPoints)}|typed_arrays={(downsampleTypedArraysForUltralight ? "on" : "off")}|plain_arrays={(convertTypedArraysToPlainJson ? "on" : "off")}|diag={(injectUltralightClientDiagnostics ? "on" : "off")}|allow_larger={(allowLargerOptimizedHtmlForCompatibility ? "on" : "off")} -->";
     }
 
     private bool IsClientDebugRequest(HttpListenerRequest request)
