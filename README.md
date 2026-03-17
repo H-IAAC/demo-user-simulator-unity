@@ -68,14 +68,14 @@ url = {https://github.com/H-IAAC/demo-user-simulator-unity}
 
 ## Authors
 
-- (2026-) Henrique Parede de Souza: Computer Engineering student, FEEC-UNICAMP
+- (2026-) [Henrique Parede de Souza](https://github.com/Henrique-hpds): Computer Engineering student, FEEC-UNICAMP
 - (Advisor, 2026-) Paula Dornhofer Paro Costa: Professor, FEEC-UNICAMP
   
 ## Acknowledgements
 
-Project supported by the brazilian Ministry of Science, Technology and Innovations, with resources from Law No. 8,248, of October 23, 1991
-
 This study was financed, in part, by the São Paulo Research Foundation (FAPESP), Brasil. Process Number 2024/23473-6.
+
+Project supported by the brazilian Ministry of Science, Technology and Innovations, with resources from Law No. 8,248, of October 23, 1991.
 
 ## License
 
